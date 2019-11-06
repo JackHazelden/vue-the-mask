@@ -6,8 +6,8 @@ export default function dynamicMask (maskit, masks, tokens) {
       var currentMask = masks[i]
       i++
       var nextMask = masks[i]
-	    var nextMaskMatches = nextMask && maskit(value, nextMask, true, tokens).length === value.length
-      if (! (nextMaskMatches && nextMask.length >= currentMask.length) {
+      var nextMaskMatches = nextMask && maskit(value, nextMask, true, tokens).length===value.length
+      if (! (nextMaskMatches && nextMask.length >= currentMask.length)) {
         return maskit(value, currentMask, masked, tokens)
       }
     }
